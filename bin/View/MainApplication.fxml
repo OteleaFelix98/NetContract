@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.Tooltip?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+
+
+<AnchorPane id="AnchorPane" fx:id="acContent" prefHeight="607.0" prefWidth="880.0" stylesheets="@../Style/MainStyle.css" xmlns="http://javafx.com/javafx/8.0.141" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller.MainApplication">
+    <children>
+        <BorderPane layoutX="24.0" prefHeight="563.0" prefWidth="752.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+            <top>
+                <AnchorPane prefHeight="55.0" prefWidth="752.0" BorderPane.alignment="CENTER">
+                    <children>
+                        <HBox alignment="CENTER" layoutX="78.0" layoutY="-22.0" prefHeight="78.0" prefWidth="752.0" spacing="10.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                            <children>
+                                <TextField fx:id="tfSearch" prefHeight="31.0" prefWidth="570.0" promptText="Search by: First Name, Last Name or Address." onKeyTyped="#searchRecord" />
+                            </children>
+                        </HBox>
+                    </children>
+                </AnchorPane>
+            </top>
+            <center>
+                <TableView fx:id="tblCustomer" editable="true" prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: none; -fx-border-color: none;" BorderPane.alignment="CENTER">
+                    <columns>
+                        <TableColumn fx:id="clmClientId" prefWidth="50.0" text="ID" style="-fx-text-color: black"/>
+                        <TableColumn fx:id="clmFirstName" prefWidth="130.0" text="First Name" />
+                        <TableColumn fx:id="clmClientLastName" prefWidth="160.0" text="Last Name" />
+                        <TableColumn fx:id="clmClientAddress" prefWidth="180.0" sortable="false" text="Address" />
+                        <TableColumn fx:id="clmNetSpeed" prefWidth="100.0" text="Speed" />
+                        <TableColumn fx:id="clmNetTraffic" prefWidth="100.0" text="Traffic" />
+                        <TableColumn fx:id="clmPeriod" prefWidth="100.0" text="Period" />
+                    </columns>
+                </TableView>
+            </center>
+            <bottom>
+                <AnchorPane prefHeight="75.0" prefWidth="820.0" BorderPane.alignment="CENTER">
+                    <children>
+                        <HBox alignment="CENTER_RIGHT" layoutX="157.0" prefHeight="100.0" prefWidth="820.0" spacing="30.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                            <children>
+                                <Button fx:id="btnAddClient" mnemonicParsing="false" onAction="#btnAddOnAction" text="Add New" />
+                                <Button fx:id="btnUpdate" onAction="#btnUpdateOnAction" mnemonicParsing="false" prefHeight="33.0" prefWidth="117.0" text="Update" />
+                                <Button fx:id="btnDelete" onAction="#btnDeleteOnAction" mnemonicParsing="false" prefHeight="33.0" prefWidth="120.0" text="Delete" />
+                            </children>
+                            <padding>
+                                <Insets left="30.0" right="30.0" />
+                            </padding>
+                        </HBox>
+                    </children>
+                </AnchorPane>
+            </bottom>
+        </BorderPane>
+    </children>
+    <padding>
+        <Insets left="30.0" right="30.0" />
+    </padding>
+</AnchorPane>

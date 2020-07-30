@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.net.URL?>
+<?import javafx.scene.Group?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.text.Font?>
+
+<Group xmlns="http://javafx.com/javafx/8.0.141" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller.UpdateRecordController">
+   <children>
+      <AnchorPane id="AnchorPane" fx:id="apContent" layoutX="10.0" layoutY="11.0" prefHeight="565.0" prefWidth="496.0">
+         <children>
+            <GridPane layoutX="46.0" layoutY="43.0">
+               <children>
+                  <Label text="SELECT ID:" />
+                  <TextField fx:id="tfSelectId" GridPane.columnIndex="1" GridPane.rowIndex="0" /> 
+                  <Label text="First Name:" GridPane.columnSpan="2" GridPane.rowIndex="1" />
+                  <TextField fx:id="tfFirstName" GridPane.columnSpan="4" GridPane.rowIndex="2" />
+                  <Label text="Last Name:" GridPane.columnSpan="2" GridPane.rowIndex="3" />
+                  <TextField fx:id="tfLastName" GridPane.columnSpan="4" GridPane.rowIndex="4" />
+                  <Label text="Address :" GridPane.columnSpan="2" GridPane.rowIndex="5" />
+                  <TextArea fx:id="taAddress" prefHeight="200.0" prefWidth="200.0" GridPane.columnSpan="4" GridPane.rowIndex="6" GridPane.rowSpan="3" />
+                  <Label text="Internet Speed:" GridPane.columnSpan="2" GridPane.columnIndex="1" GridPane.rowIndex="9" />
+                  <ComboBox fx:id="cbSpeed" prefHeight="25.0" prefWidth="211.0" GridPane.columnSpan="2" GridPane.columnIndex="1" GridPane.rowIndex="10" />
+                  <Label text="Internet Traffic:" GridPane.columnSpan="2" GridPane.columnIndex="1" GridPane.rowIndex="11" />
+                  <ComboBox fx:id="cbTraffic" prefHeight="25.0" prefWidth="211.0" GridPane.columnSpan="2" GridPane.columnIndex="1" GridPane.rowIndex="12" />
+                  <Label text="Contract Period:" GridPane.columnSpan="2" GridPane.columnIndex="1" GridPane.rowIndex="13" />
+                  <ComboBox fx:id="cbPeriod" prefHeight="25.0" prefWidth="211.0" GridPane.columnSpan="2" GridPane.columnIndex="1" GridPane.rowIndex="14" />
+                  <Button fx:id="btnSave" mnemonicParsing="false" onAction="#btnSaveOnAction" text="Save" GridPane.columnIndex="1" GridPane.columnSpan="2" GridPane.halignment="CENTER" GridPane.rowIndex="16" GridPane.valignment="CENTER" />
+               </children>
+               <columnConstraints>
+                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+               </columnConstraints>
+              <rowConstraints>
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+               </rowConstraints>
+            </GridPane>
+            <Button fx:id="btnClose" layoutX="443.0" layoutY="7.0" mnemonicParsing="false" onAction="#btnCloseOnAction" prefHeight="34.0" prefWidth="34.0" stylesheets="@../Style/btnOnText.css" />
+
+         </children>
+         <stylesheets>
+            <URL value="@../Style/PopUp.css" />
+            <URL value="@../Style/MainStyle.css" />
+         </stylesheets>
+      </AnchorPane>
+   </children>
+</Group>
